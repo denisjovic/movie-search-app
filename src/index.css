@@ -35,3 +35,39 @@ body {
   text-transform: uppercase;
   margin-bottom: 0.2rem;
 }
+
+.input {
+  font-size: 1.5rem;
+  padding: 0.5em 1.7rem;
+  border-radius: 1.2em;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.7rem 1.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 1.3em;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+@media (min-width: 750px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}

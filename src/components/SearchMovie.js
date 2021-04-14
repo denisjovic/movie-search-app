@@ -12,6 +12,7 @@ const SearchMovie = () => {
           name='query'
           id='query'
           placeholder='i.e Jurassic Park'
+          className='input'
         />
         <button className='btn'>Search</button>
       </form>
