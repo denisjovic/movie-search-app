@@ -52,6 +52,10 @@ small {
   margin-bottom: 1em;
 }
 
+.input:focus {
+  outline: none;
+}
+
 .btn {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
