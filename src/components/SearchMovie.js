@@ -13,9 +13,15 @@ const SearchMovie = () => {
       let data = await response.json();
       setMovieData(data.results);
     } catch (err) {
-      console.err(err);
+      console.log(err);
     }
   };
+
+  const showMovie = movieData
+    .filter((movie) => movie.poster_path)
+    .map((movie) => {
+      return <MovieCard movie={movie} key={movie.id} />;
+    });
 
   return (
     <div>
@@ -34,13 +40,7 @@ const SearchMovie = () => {
         />
         <button className='btn'>Search</button>
       </form>
-      <div className='card-list'>
-        {movieData
-          .filter((movie) => movie.poster_path)
-          .map((movie) => {
-            return <MovieCard movie={movie} key={movie.id} />;
-          })}
-      </div>
+      <div className='card-list'>{showMovie}</div>
     </div>
   );
 };
